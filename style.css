@@ -10,19 +10,22 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(loginbackground.jpeg);
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
     background-size: 100% 100%;
     min-height: 100vh;
     
 }
 
-body h1{
-    font-size: 30px;
-    bottom: 40px;
-    position: absolute;
-    display: flex;
-    justify-content: end;
+.section h1{
     
+    font-size: 30px;
+    bottom: 20px;
+    position: absolute;
+    
+    justify-content: end;
+    text-transform: uppercase;
+    
+    overflow: hidden;
     
 }
 
@@ -77,21 +80,22 @@ header{
 
 
 .btnlogin-popup{
-    width: 90px;
-    height: 30px;
+    width: 110px;
+    height: 40px;
     margin-left: 15px;
     background: transparent;
-    border: 2px solid #F8FAFC;
+    border: 3px solid #166ec7;
     border-radius: 5px ;
-    font-size: 20px;
+    font-size: 25px;
     color: #F8FAFC;
     cursor: pointer;
     transition: .5s;
 }
 .btnlogin-popup:hover{
     
-    background-color: #F8FAFC;
-    color: #0B0F1A;
+    display: block;
+    filter: drop-shadow(0 0 10px #fffdef);
+    background: #166ec7;
 }
 
 .user-auth{
@@ -431,43 +435,210 @@ header{
 .profile-box .dropdown a:hover{
     background:#eee;
 }
+/**Contact**/
 
-
-/**ABOUT**/
-
-.about-sec{
-    margin-top: 200px;
-    margin-left: 20px;
-}
-.About-us h2{
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
     display: flex;
-    text-align: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+
+}
+.contact .content h2{
+    font-size: 36px;
     text-decoration: underline;
     text-transform: uppercase;
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-weight: 500;
+    color: #00bcd4;
+    text-shadow:0 0 20px #00bcd4;
+
 }
-.About-us p{
-    display: flex;
-    
-    justify-content: center;
+.contact .content p{
     font-size: 20px;
+    margin-top: 10px;
+    
+    
     font-weight: 600;
+    color: #eee;
+    
+}
+.container-query{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container-query .contactinfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container-query .contactinfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container-query .contactinfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background:#eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container-query .contactinfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #eee;
+    flex-direction: column;
+    font-weight: 500;
+}
+.container-query .contactinfo .box .text h1{
+    font-weight: 500;
+    color: #00bcd4;
+
+}
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 40px rgba(255,255,255,.5);
+}
+.contactform h2{
+    font-size: 25px;
+    color: #0B0F1A;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contactform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
 }
 
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width: 100%;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactform .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #0B0F1A;
+}
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputbox input[type="submit"]{
+    width: 200px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+   box-shadow: 0 0 20px #00bcd4;
+
+}
+/**ABOUT**/
+
+.Hero-sec{
+   padding: 0 15px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   margin-top: 300px;
+   background: transparent;
+   position: relative;
+   gap: 4rem;
+   width: 100%;
+   height: 100%;
+   
+   
+}
+img{
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(255,255,255,.5);
+    cursor: pointer;
+    margin-left: 10px;
+    
+    vertical-align: middle;
+}
+
+
+.text-2 ul{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #E5E7EB;
+    text-shadow: 0 0 10px #E5E7EB;
+
+}
+.text-2{
+    flex: 1;
+    width: 100%;
+    
+    
+    
+}
+.text-2 h2{
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 35px;
+    text-shadow: 0 0 30px #4FD1FF;
+    color: #4FD1FF;
+}
+.text-2 p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #E5E7EB;
+    text-shadow: 0 0 10px #E5E7EB;
+}
 .container{
     display: flex;
+    
     flex-wrap:wrap;
     text-overflow: none;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
-    margin-top: 30px;
+   margin-top: 10px;
     margin-bottom: 10px;
-    justify-content: space-between;
-}
-.our-offerings{
-    margin-top: 50px;
+    
 }
 
 .our-offerings h1{
@@ -476,6 +647,10 @@ header{
     text-align: center;
     text-decoration: underline;
     text-transform: uppercase;
+    font-size: 35px;
+    color:#4FD1FF ;
+    text-shadow: 0 0 30px#4FD1FF;
+    margin-bottom: 15px;
     
 }
 
@@ -483,14 +658,16 @@ header{
     height: 200px;
     width: 300px;
     background: rgba(255,255,255,.5);
-    box-shadow: 0 0 30px rgba(255,255,255,.5);
+    
+    box-shadow: 0 0 30px #4FD1FF;
     backdrop-filter: blur(30px);
     border-radius: 5px;
     border: none;
     overflow: hidden;
     position: relative;
     margin-top: auto;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
     
     justify-content: space-evenly;
     
@@ -517,7 +694,7 @@ header{
     height: 200px;
     width: 300px;
     background: rgba(255,255,255,.5);
-    box-shadow: 0 0 30px rgba(255,255,255,.5);
+    box-shadow: 0 0 30px #4FD1FF;
     backdrop-filter: blur(30px);
     border-radius: 5px;
     margin-top: auto;
@@ -525,7 +702,12 @@ header{
     
     border: none;
     
+    margin-right: 20px;
     margin-left: 10px;
+    
+
+    
+    position: relative;
     overflow: hidden;
     
     justify-content: space-evenly;
@@ -552,13 +734,14 @@ header{
     height: 200px;
     width: 300px;
     background: rgba(255,255,255,.5);
-    box-shadow: 0 0 30px rgba(255,255,255,.5);
+    box-shadow: 0 0 30px #4FD1FF;
     backdrop-filter: blur(30px);
     border-radius: 5px;
-    margin-top: auto;
+    margin-top: 10px;
    
     
     border: none;
+    margin-right: 10px;
     
     margin-left: 10px;
     overflow: hidden;
@@ -587,7 +770,7 @@ header{
     height: 200px;
     width: 300px;
     background: rgba(255,255,255,.5);
-    box-shadow: 0 0 30px rgba(255,255,255,.5);
+    box-shadow: 0 0 30px #4FD1FF;
     backdrop-filter: blur(30px);
     border-radius: 5px;
    margin-top: auto;
@@ -595,6 +778,8 @@ header{
     border: none;
     
     margin-right: 20px;
+    margin-left: 10px;
+    
     overflow: hidden;
     
     justify-content: space-evenly;
